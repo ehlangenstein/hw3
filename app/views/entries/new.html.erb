@@ -1,4 +1,22 @@
-<%form_with :model => @entry do |form| %>
+<h1>New Entry for </h1>
+<%= form_with :model => @entry do |form| %>
 <p>
-  <%= form.label "name", %>
+  <%= form.label "title", "Title" %>
+  <%= form.text_field "title" %>
 </p>
+
+<p>
+  <%= form.label "description", "Description" %>
+  <%= form.text_field "description" %>
+</p>
+
+<p>
+  <%= form.label "date", "Date" %>
+  <%= form.date_field "posted_on" %>
+</p>
+
+<%= form.hidden_field "place_id"%>
+<%= form.submit %>
+
+
+<% end %>
